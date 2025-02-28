@@ -1,0 +1,21 @@
+﻿@model HomeIndexViewModel
+
+<h1>Most Popular Posts</h1>
+
+@foreach (var broadcast in Model.Broadcasts)
+{
+    <p>
+        <b>
+            @broadcast.User.Name
+            (@broadcast.Published.ToShortDateString() @broadcast.Published.ToShortTimeString())
+        </b>:
+        @broadcast.Message
+    </p>
+
+        @if (!string.IsNullOrEmpty(broadcast.Image)) @* 2. *@
+        {
+            <img src="~/PostImages/@broadcast.Image" alt="Broadcast Image" style="max-width: 300px;" />
+        }
+
+    <p>Likes: @broadcast.Likes.Count()</p> @* 6. *@
+}

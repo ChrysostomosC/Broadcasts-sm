@@ -1,0 +1,30 @@
+﻿@model ProfileIndexViewModel
+
+<div>
+    <h1>Update profile</h1>
+
+    @if (!string.IsNullOrEmpty(Model.ProfilePic))
+    {
+        <img src="@Model.ProfilePic" alt="Profile Picture" width="150" height="150" style="border-radius: 50%;" />
+    } @* 2. *@
+    else
+    {
+        <p>No profile picture uploaded.</p>
+    } @* 2. *@
+
+    <form action="/Profile/Update" method="post" enctype="multipart/form-data">
+        @*2. Enctype*@
+        <input name="Name" value="@Model.Name" placeholder="Name" />
+        <input type="file" name="Photo" value="@Model.Photo" /> @* 2. *@
+        <input type="submit" class="btn btn-primary" value="Save" />
+    </form>
+
+    @if (TempData["success"] != null)
+    {
+        <p style="color: green;">@TempData["success"]</p>
+    } @* 2. *@
+    else
+    {
+        <p style="color: red;">@TempData["error"]</p>
+    } @* 3. *@
+</div>

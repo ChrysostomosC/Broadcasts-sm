@@ -1,0 +1,57 @@
+﻿@model HomeIndexViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+
+    <h2>New Broadcast</h2>
+
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div class="alert alert-danger">
+            @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+        </div>
+    } @* 8. *@
+
+    <form action="/Home/Broadcast" method="post" enctype="multipart/form-data">
+        @* 2. enctype *@
+        <textarea name="Message"></textarea> <br />
+        <p style="font-weight: bold;">Upload a photo:</p>
+        <input type="file" name="Image" /> <br /> @* 2. *@
+        <input type="submit" class="btn btn-primary" value="Post" />
+    </form>
+
+    <hr />
+
+    <h2>Broadcasts</h2>
+
+    @foreach (var broadcast in Model.Broadcasts)
+    {
+        <p>
+            <b>
+                @broadcast.User.Name
+                (@broadcast.Published.ToShortDateString() @broadcast.Published.ToShortTimeString())
+            </b>:
+            @broadcast.Message
+        </p>
+
+        @if (!string.IsNullOrEmpty(broadcast.Image)) @* 2. *@
+        {
+            <img src="~/PostImages/@broadcast.Image" alt="Broadcast Image" style="max-width: 300px;" />
+        }
+
+        <p>
+            @* 5. *@
+            Likes: @broadcast.Likes.Count()
+        </p>
+
+        <form asp-action="LikeBroadcast" method="post">
+            <input type="hidden" name="broadcastId" value="@broadcast.Id" />
+            <input type="submit" value="Like 👍" class="btn btn-primary" />
+        </form> @* 5. *@
+
+        <hr />
+    }
+</div>

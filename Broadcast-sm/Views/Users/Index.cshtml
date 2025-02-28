@@ -1,0 +1,21 @@
+﻿@model UsersIndexViewModel
+
+<div>
+    <h1>Search for users</h1>
+
+    <form action="/Users" method="get">
+        <input type="text" name="Search" value="@Model.Search" placeholder="Search" />
+        <input type="submit" class="btn btn-primary" value="Search" />
+    </form>
+
+    <hr />
+
+    <h2>Results</h2>
+
+    @foreach (var user in Model.Result) // Model.Result, accessing the list of users that was populated in the controller from UsersIndexViewModel
+    {
+        <p>
+            <a href="/Users/@user.Id">@user.Name</a> @*@user.Id inside the URL allows the link to be dynamically generated based on each user's unique ID.*@
+        </p>
+    }
+</div>

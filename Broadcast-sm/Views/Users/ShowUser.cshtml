@@ -1,0 +1,33 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model UsersShowUserViewModel
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+    var user = await UserManager.GetUserAsync(User);
+    ViewData["Title"] = Model.User.Name;
+}
+
+<div>
+    <h1>Broadcasts from @Model.User.Name</h1>
+
+    @if(user.Id != Model.User.Id)
+    {
+        <form action="/Users/Listen" method="post">
+            <input type="hidden" name="UserId" value="@Model.User.Id" />
+            <input type="submit" class="btn btn-primary" value="Listen to" />
+        </form>
+        <br />
+        <form action="/Users/Ignore" method="post">
+            <input type="hidden" name="UserId" value="@Model.User.Id" />
+            <input type="submit" class="btn btn-primary" value="Ignore" />
+        </form>
+    }
+
+    @foreach (var broadcast in Model.Broadcasts)
+    {
+        <p>
+            <b>@broadcast.Published.ToShortDateString() @broadcast.Published.ToShortTimeString()</b>:
+            @broadcast.Message
+        </p>
+    }
+</div>

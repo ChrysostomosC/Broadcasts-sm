@@ -1,0 +1,20 @@
+﻿@model Broadcast_sm.ViewModels.UsersRecommendedViewModel
+
+<h1>Recommended Users</h1>
+
+@if (Model.UsersRecommended.Any())
+{
+    <ul>
+        @foreach (var user in Model.UsersRecommended)
+        {
+            <li>
+                <strong>@user.Name</strong> (@user.UserName)
+                <!-- Optionally, add a follow button here -->
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>No recommendations available at this time.</p> @* 7. *@ 
+}
