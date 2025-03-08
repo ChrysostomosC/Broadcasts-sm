@@ -6,7 +6,7 @@
         public string Message { get; set; }
         public ApplicationUser User { get; set; }
 
-        // Add this property for clarity:
+        // Added property for clarity:
         public string UserId { get; set; } /*5.*/
 
 
