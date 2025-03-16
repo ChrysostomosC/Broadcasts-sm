@@ -7,4 +7,3 @@ In this project, we built a web application that allows users to post “broadca
 ![Home Page - Broadcast_sm - Google Chrome 3_3_2025 9_20_02 PM](https://github.com/user-attachments/assets/046a0a3e-26d3-4467-aacf-cb70adcdb272)
 ![Home Page - Broadcast_sm - Google Chrome 3_3_2025 9_20_26 PM](https://github.com/user-attachments/assets/68e123d6-fbf9-4a5a-89db-179635a40ce4)
 ![Home Page - Broadcast_sm - Google Chrome 3_3_2025 9_20_35 PM](https://github.com/user-attachments/assets/98060036-df39-4b79-ba7e-e26bd95996fc)
-![Home Page - Broadcast_sm - Google Chrome 3_3_2025 9_20_35 PM](https://github.com/user-attachments/assets/629d1228-a398-4d2b-82c4-be151c83dd51)
