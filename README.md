@@ -28,5 +28,7 @@ The app features a smart recommendation system to suggest new people to follow, 
 ![Home Page - Broadcast_sm - Google Chrome 3_3_2025 9_20_35 PM](https://github.com/user-attachments/assets/98060036-df39-4b79-ba7e-e26bd95996fc)<hr />
 ![Screenshot 2025-03-27 113330](https://github.com/user-attachments/assets/776077c0-097e-4957-9fee-dc1c8463ab41)<hr />
 ![Screenshot 2025-03-27 113358](https://github.com/user-attachments/assets/6e8f80e5-6919-4336-ad3d-7c3c6114179c)<hr />
+![Screenshot 2025-03-27 113637](https://github.com/user-attachments/assets/95312661-828a-4e5c-8a6b-7f2d649671af)<hr />
+![Screenshot 2025-03-27 113717](https://github.com/user-attachments/assets/58521156-28fb-4a4b-8808-8a70fd59c572)<hr />
 
 
