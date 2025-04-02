@@ -14,7 +14,7 @@ The app features a smart recommendation system to suggest new people to follow, 
 
 ## Tech Stack
 
-- **Frontend:** HTML, CSS, JavaScript (possibly with a framework like Vue.js or React)
+- **Frontend:** HTML, CSS, JavaScript
 - **Backend:** ASP.NET Core
 - **Data Access:** Entity Framework Core (EF Core)
 - **User Management:** ASP.NET Identity
